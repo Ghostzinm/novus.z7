@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'stretwear';
+  src: url(../fonts/Cinzel-VariableFont_wght.ttf);
+}
+
 body {
   margin: 0;
   background: #0f0f0f;
@@ -5,21 +10,64 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  background: #000;
-  padding: 20px;
-  text-align: center;
-  font-size: 28px;
-  letter-spacing: 3px;
-  color: #fff;
-  border-bottom: 2px solid #111;
-}
+/*============================= header ============================ */
 
-.logo {
-  max-width: 160px;
+
+header img {
+  height: 400px;
+  width: 400px;
   margin-bottom: 10px;
 }
 
+.cabecalho {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  font-family: 'sretwear';
+  color: #fff;
+}
+
+.cabecalho h1 {
+  margin-top: -25px;
+  letter-spacing: 30px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.navegacao>ul a {
+  text-decoration: none;
+  color: #f89494;
+
+
+  margin: 5px;
+  padding: 3px;
+}
+
+.menu-principal {
+  display: flex;
+  padding: 0px;
+}
+
+.menu-principal>li a {
+  margin: 5px;
+  padding: 5px;
+
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: #ff3c00;
+  text-decoration: underline;
+
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+
+/*================================================================ */
 .container {
   width: 80vw;
   display: grid;
@@ -79,7 +127,8 @@ header {
 
 .size {
   font-size: 13px;
-  margin: 10px 0;}
+  margin: 10px 0;
+}
 
 
 footer {
@@ -89,6 +138,7 @@ footer {
   color: #555;
   font-size: 14px;
 }
+
 footer a {
   color: #0ff;
   text-decoration: none;
@@ -96,6 +146,17 @@ footer a {
 
 /* RESPONSIVO */
 @media screen and (max-width: 768px) {
+
+  header img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .cabecalho h1 {
+    font-size: 24px;
+    letter-spacing: 20px;
+  }
+
   .container {
     grid-template-columns: 1fr 1fr;
     padding: 20px;
@@ -115,10 +176,22 @@ footer a {
     font-size: 12px;
     align-items: start;
   }
-  
+
 }
 
 @media screen and (max-width: 468px) {
+
+
+  header img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .cabecalho h1 {
+    font-size: 20px;
+    letter-spacing: 15px;
+  }
+
   .container {
     grid-template-columns: 1fr 1fr;
     padding: 10px;
